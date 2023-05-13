@@ -1,6 +1,6 @@
 // For Kathleen's game : Simon
-const replicaCode = 2871
-const actualCode = 9103
+const replicaCode = '2871'
+const actualCode = '9103'
 
 correctCode.textContent='Correct Code: ' + replicaCode
 
@@ -21,13 +21,13 @@ document.addEventListener('click', function(event){
     let attemptVal=row.querySelector('.attempt').value;
     displayVal = lockReturn(attemptVal, correctCode) // Return value that should be on display
     let correctOrWrong // Variable to hold the message whether authentication is successful or not
-    if (displayVal==correctCode){
+    if (attemptVal==correctCode){
       correctOrWrong = 'Authentication Successful'
     }
     else{
       correctOrWrong = 'Authentication Failed'
     }
-
+    console.log(attemptVal, correctCode); console.log(attemptVal==correctCode)
     let result=row.querySelector('.result')
     result.textContent=displayVal + ' - ' + correctOrWrong
 })
