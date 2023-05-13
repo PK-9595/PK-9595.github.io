@@ -1,9 +1,30 @@
 // For Kathleen's game : Simon
+const replicaCode = 2871
+const actualCode = 9103
 
-function lockReturn(attempt, code=2871){
+document.addEventListener('click', function(event){
+    if (event.target.closest('.row .enter')){return}
+    let row=event.target.closest('.row')
+    let correctCode
+
+    // Select actual value to compare against based on row type
+    if (row.id == 'replicaRow'){
+        correctCode = replicaCode
+    }
+    else{
+        correctCode = actualCode
+    }
+    
+    let attemptVal=row.querySelector('.enter').value
+    displayVal = lockReturn(attemptVal, correctCode)
+    let result=row.querySelector('.result')
+    result.textContent=displayVal
+})
+
+function lockReturn(attempt, correctCode){
     attempt = new String(attempt)
     attemptDigits=Array.from(attempt) //split attempt into array of digits
-    codeDigits=Array.from(new String(code)) // Split code into array of digits
+    codeDigits=Array.from(new String(correctCode)) // Split code into array of digits
     
     // Input handling
     if (attemptDigits.length != 4) {
@@ -42,8 +63,3 @@ function lockReturn(attempt, code=2871){
     return returnVal
     //return returnVal
   }
-  
-  let code=7631
-  
-  console.log(lockReturn('1234')) // Replica
-  console.log(lockReturn('7631',code)) // Actual
