@@ -12,7 +12,16 @@
     padding: 5px;
 }
 
+.enter {
+    height: 25px;
+}
+
 .row {
     margin: 15px;
-    line-height: 3;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 0;
+    flex-shrink: 1;
+    align-items: center;
 }
