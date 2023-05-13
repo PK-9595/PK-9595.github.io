@@ -2,8 +2,10 @@
 const replicaCode = 2871
 const actualCode = 9103
 
+correctCode.textContent='Correct Code: ' + replicaCode
+
 document.addEventListener('click', function(event){
-    if (event.target.closest('.row .enter')){return}
+    if (!event.target.closest('.row .enter')){return}
     let row=event.target.closest('.row')
     let correctCode
 
@@ -15,10 +17,19 @@ document.addEventListener('click', function(event){
         correctCode = actualCode
     }
     
-    let attemptVal=row.querySelector('.enter').value
-    displayVal = lockReturn(attemptVal, correctCode)
+    // Getting return value and whether the code is correct
+    let attemptVal=row.querySelector('.attempt').value;
+    displayVal = lockReturn(attemptVal, correctCode) // Return value that should be on display
+    let correctOrWrong // Variable to hold the message whether authentication is successful or not
+    if (displayVal==correctCode){
+      correctOrWrong = 'Authentication Successful'
+    }
+    else{
+      correctOrWrong = 'Authentication Failed'
+    }
+
     let result=row.querySelector('.result')
-    result.textContent=displayVal
+    result.textContent=displayVal + ' - ' + correctOrWrong
 })
 
 function lockReturn(attempt, correctCode){

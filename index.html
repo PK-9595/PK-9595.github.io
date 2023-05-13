@@ -6,33 +6,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Simon's Game</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
   <!-- Add replica row.  -->
   <div id="replicaRow" class="row">
     <!-- Start with for replica input/guess -->
-    <span>Replica Lock</span>
+    <span>REPLICA LOCK: </span>
     <textarea class="attempt">Input attempt here</textarea>
     <!-- Then an enter button -->
     <button class="enter">ENTER</button>
     <!-- Then a box for displaying output, output also says "Authentication Successful / Authentication Failed" -->
     <span>Display Output: </span>
-    <span class="result">Test display</span>
-    <span>               Correct code: 2871</span>
+    <span class="result">- - - -</span>
+    <span id="correctCode">Correct code: - - - -</span>
   </div>
 
   <!-- Add actual row.  -->
   <div id="actualRow" class="row">
     <!-- Start with for replica input/guess -->
-    <span>Actual Lock</span>
+    <span>ACTUAL LOCK: </span>
     <textarea class="attempt">Input attempt here</textarea>
     <!-- Then an enter button -->
     <button class="enter">ENTER</button>
     <!-- Then a box for displaying output, output also says "Authentication Successful / Authentication Failed" -->
     <span>Display Output: </span>
-    <span class="result">Test display</span>
+    <span class="result">- - - -</span>
   </div>
 
 

@@ -1,0 +1,15 @@
+.attempt {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#correctCode {
+    position:relative; 
+    left:20px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.row {
+    margin: 15px;
+}
