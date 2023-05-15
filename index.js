@@ -10,4 +10,10 @@ function trackCursor(event){
     cursorCoordinates.textContent = '<' + (event.clientX + window.scrollX) + ' , ^' + (event.clientY + window.scrollY)
 }
 
+let container = document.querySelector('.container'); //console.log(container)
+let box1 = document.querySelector('#box1'); //console.log(box1)
+let box2 = document.querySelector('#box2'); //console.log(box2)
+
 // Experiments
+box1.style.position='absolute'
+box1.style.bottom = 10 + 'px'
