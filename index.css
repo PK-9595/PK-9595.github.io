@@ -1,27 +1,43 @@
-.attempt {
-    display: inline-block;
-    vertical-align: middle;
-    width: 150px;
-    height: 25px;
+/* For Javascript geometric properties testing - related to box model */
+
+#cursorCoordinates {
+    position: fixed;
+    cursor: default;
+    z-index: 1;
 }
 
-#correctCode {
-    position:relative; 
-    left:20px;
-    border: 1px solid black;
-    padding: 5px;
+.box {
+    position: relative;
+    margin: 5px;
+    border: 10px solid orange;
+    padding: 15px;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
 }
 
-.enter {
-    height: 25px;
-}
-
-.row {
+.content {
+    background-color: green;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: calc(100% -30px);
+    height:calc(100% -30px);
     margin: 15px;
-    line-height: 1.5;
-    display: flex;
-    flex-wrap: nowrap;
-    min-width: 0;
-    flex-shrink: 1;
-    align-items: center;
+}
+
+.container {
+    position: relative;
+    margin: 50px;
+    border: 100px solid orange;
+    padding: 30px;
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+}
+
+#legend {
+    white-space: pre-wrap;
 }

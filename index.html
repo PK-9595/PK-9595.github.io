@@ -1,4 +1,4 @@
-<!-- For Kathleen's game : Simon -->
+<!-- For Javascript geometric properties testing - related to box model -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,37 +6,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon's Game</title>
+  <title>Document</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <div id="cursorCoordinates">test</div>
 
-  <!-- Add replica row.  -->
-  <div id="replicaRow" class="row">
-    <!-- Start with for replica input/guess -->
-    <span>REPLICA LOCK: </span>
-    <textarea class="attempt">Input attempt here</textarea>
-    <!-- Then an enter button -->
-    <button class="enter">ENTER</button>
-    <!-- Then a box for displaying output, output also says "Authentication Successful / Authentication Failed" -->
-    <span>Display Output: </span>
-    <span class="result">- - - -</span>
-    <span id="correctCode">Correct passcode: - - - -</span>
+  <div class="container">
+    <div class="content">
+      
+      <div class="box" id="box1">
+        <div class="content">CONTENT OF BOX 1</div>
+      </div>
+
+      <div class="box" id="box2">
+        <div class="content">CONTENT OF BOX 2</div>
+      </div>
+
+    </div>
   </div>
 
-  <!-- Add actual row.  -->
-  <div id="actualRow" class="row">
-    <!-- Start with for replica input/guess -->
-    <span>ACTUAL LOCK: </span>
-    <textarea class="attempt">Input attempt here</textarea>
-    <!-- Then an enter button -->
-    <button class="enter">ENTER</button>
-    <!-- Then a box for displaying output, output also says "Authentication Successful / Authentication Failed" -->
-    <span>Display Output: </span>
-    <span class="result">- - - -</span>
+  <div id="legend">
+    Margin : Red
+    Border : Orange
+    Padding : Yellow
+    Content : Green
   </div>
-
-
   <script src="index.js"></script>
 </body>
 </html>
