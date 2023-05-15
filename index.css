@@ -19,13 +19,13 @@
 .content {
     background-color: green;
     position: absolute;
-    width: calc(100% -30px);
-    height:calc(100% -30px);
+    width: calc(100% -40px);
+    height:calc(100% -40px);
     left: 0px;
     right: 0px;
     top: 0px;
     bottom: 0px;
-    margin: 15px;
+    margin: 20px;
 }
 
 .container {
