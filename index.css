@@ -7,14 +7,21 @@
 }
 
 .box {
-    position: relative;
+    position: absolute;
     margin: 10px;
     border: 15px solid orange;
     padding: 20px;
     background-color: yellow;
-    width: 100px;
-    height: 100px;
 }
+
+#box1,#box2 {
+    box-sizing: content-box;
+}
+
+#box3,#box4 {
+    box-sizing: border-box;
+}
+
 
 .content {
     background-color: green;
@@ -30,13 +37,15 @@
 
 .container {
     display:inline-block;
-    position: relative;
+    position: absolute;
     margin: 10px;
     border: 15px solid orange;
     padding: 20px;
     background-color: yellow;
     width: 400px;
     height: 400px;
+    left: 0px;
+    top: 0px;
 }
 
 #legend {
